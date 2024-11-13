@@ -4,11 +4,14 @@
   //60 asientos
     #define max_Filas 15
     #define max_columnas 4
-
+      void mostrar_asientos (char asientos[max_filas][max_columnas],int filas,int columnas){
+      
+      }
 //Autobus carretera(2)
   //40 asientos
     #define max_columnas 4
     #define max_filas 10
+
 //Vagonetas(4)
   //15 asientos
     #define max_columnas 3 
