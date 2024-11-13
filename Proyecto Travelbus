@@ -5,7 +5,15 @@
     #define max_Filas 15
     #define max_columnas 4
       void mostrar_asientos (char asientos[max_filas][max_columnas],int filas,int columnas){
-      
+        printf("\nEstado de los asientos:\n");
+        printf(" ");
+        for(int j=0;j<columnas;j++){
+          printf("%d",j+1);
+        }
+        printf("\n");
+        for(int i=0;i<filas;i++){
+
+        }
       }
 //Autobus carretera(2)
   //40 asientos
