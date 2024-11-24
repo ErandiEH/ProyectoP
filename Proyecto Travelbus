@@ -37,7 +37,7 @@ TipoAutobus autobuses[] = {
       "Autobús Turístico",
       60, 
       {{1,0}, {2,0}, {3,0}, {4,0}, {5,0}},
-      {"Circuito Históric", "Tour Gatronómico","Parque La Mexicana", "Universum", ""},
+      {"Circuito Histórico", "Tour Gatronómico","Parque La Mexicana", "Universum", ""},
       4
   },
   { 
