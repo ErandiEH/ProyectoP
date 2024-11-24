@@ -36,7 +36,22 @@ TipoAutobus autobuses[] = {
   {  
       "Autobús Turístico",
       60, 
-      {{1,0}, {2,0},{3,0},{4,},{5,0}},
+      {{1,0}, {2,0}, {3,0}, {4,0}, {5,0}},
       {"Circuito Históric", "Tour Gatronómico","Parque La Mexicana", "Universum", ""},
       4
   },
+  { 
+      "Autobús de Carretera", 
+      40,
+      {{1,0}, {2,0}},
+      {"CDMX -> Puebla", "CDMX -> Querétaro", "CDMX -> Hidalgo", "", ""},
+      3
+  },
+  { 
+      "Vagoneta",
+      15, 
+      {{1,0}, {2,0}, {3,0}, {4,0}},
+      {"CDMX -> Tepotzotlán", "CDMX -> Valle de Bravo", "", "", ""},
+      2
+  }
+};
