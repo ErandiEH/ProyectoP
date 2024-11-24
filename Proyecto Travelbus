@@ -22,4 +22,21 @@ typdef struct {
   char rutas [5][50];
   int num_rutas;
 } TipoAutobus;
+typedef struct {
+  Usuario pasajero;
+  TipoAutobus autobus;
+  char destino[50];
+  int num_asiento;
+} Reservacion;
 
+Usuario usuarios[MAX_USUARIOS];
+int num_usuarios =0;
+
+TipoAutobus autobuses[] = {
+  {  
+      "Autobús Turístico",
+      60, 
+      {{1,0}, {2,0},{3,0},{4,},{5,0}},
+      {"Circuito Históric", "Tour Gatronómico","Parque La Mexicana", "Universum", ""},
+      4
+  },
