@@ -55,3 +55,61 @@ TipoAutobus autobuses[] = {
       2
   }
 };
+Reservacion reservaciones[100];
+int num_reservaciones = 0;
+
+// Prototipos de funciones
+void registrar_usuario();
+void mostrar_tipos_autobus();
+void realizar_reservacion();
+void mostrar_asientos(int tipo_bus);
+int seleccionar_asiento(int tipo_bus);
+void guardar_reservaciones();
+void cargar_reservaciones();
+void imprimir_boleto(Reservacion reservacion);
+
+// Función para imprimir boleto
+void imprimir_boleto(Reservacion reservacion) {
+    printf("\n--- BOLETO DE VIAJE ---\n");
+    printf("Nombre: %s\n", reservacion.pasajero.nombre);
+    printf("Tipo de Autobús: %s\n", reservacion.autobus.nombre);
+    printf("Ruta: %s\n", reservacion.destino);
+    printf("Número de Asiento: %d\n", reservacion.num_asiento);
+    printf("----------------------\n");
+}
+
+void registrar_usuario() {
+    if(num_usuarios >= MAX_USUARIOS) {
+        printf("Límite de usuarios alcanzado.\n");
+        return;
+    }
+
+    Usuario nuevo_usuario;
+    printf("Nombre completo: ");
+    scanf(" %[^\n]", nuevo_usuario.nombre);
+    printf("Correo electrónico: ");
+    scanf(" %[^\n]", nuevo_usuario.correo);
+    printf("Teléfono: ");
+    scanf(" %[^\n]", nuevo_usuario.telefono);
+
+    usuarios[num_usuarios++] = nuevo_usuario;
+    printf("Usuario registrado exitosamente.\n");
+}
+
+void mostrar_tipos_autobus() {
+    printf("\nTipos de autobuses disponibles:\n");
+    for(int i = 0; i < 3; i++) {
+        printf("%d. %s (Capacidad: %d)\n", 
+               i+1, 
+               autobuses[i].nombre, 
+               autobuses[i].capacidad_maxima);
+        
+        printf("   Rutas disponibles:\n");
+        for(int j = 0; j < autobuses[i].num_rutas; j++) {
+            if(strlen(autobuses[i].rutas[j]) > 0) {
+                printf("   - %s\n", autobuses[i].rutas[j]);
+            }
+        }
+        printf("\n");
+    }
+}
