@@ -111,3 +111,4 @@ void mostrar_tipos_autobus() {
         printf("\n");
     }
 }
+        
