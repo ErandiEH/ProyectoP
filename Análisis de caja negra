@@ -1,1 +1,41 @@
+Datos de entrada:
 
+1. Una cadena de caracteres que muestre "Sistema de Reserva de Autobuses". Una cadena de caracteres representado por "Registrar usuario". Una cadena de caracteres representando por "Realizar reservación". Una cadena de caracteres representado por "Salir". 
+Un número de tipo entero representado por "opción". Una cadena de caracteres representada por "nombre ". Una cadena de caracteres representada por "correo". Una cadena de tipo numérica representada por "teléfono".
+Una cadena de caracteres representado por "num_usuarios".
+
+2. Un valor de tipo entero representado por "tipo_bus". 
+
+3. Un valor de tipo entero representado por "ruta". 
+
+4. Un valor de tipo entero representado por "asiento".
+
+
+Datos de salida:
+
+1. Una cadena de caracteres que diga "Seleccione una opción". Una cadena de caracteres que diga "Nombre completo". Una cadena de caracteres que diga "Correo electrónico ". Una cadena de caracteres que diga "Teléfono ". 
+Una cadena de caracteres que indique "Usuario registrado exitosamente". 
+Una cadena de caracteres que diga "Límite de usuarios alcanzados".
+
+2. Una cadena de caracteres que diga "Seleccione tipo de autobús", seguido de una  cadena de caracteres que diga "Seleccione ruta". Una cadena de caracteres que muestre "Mapa de asientos - Autobús". Una representación visual del estado de los asientos con símbolos: '0': Asiento disponible, '1': Asiento ocupado. Una cadena de caracteres que diga "Seleccione número de asiento". Una cadena de caracteres que diga "Asiento ya ocupado, elija otro" o una cadena de de caracteres que diga "asiento inválido, elija un asiento del 1 a capacidad_maxima". 
+
+3. Una cadena de caracteres que diga "BOLETO DE VIAJE", seguido de una cadena de caracteres que diga "Nombre", seguido de una cadena de caracteres que diga "Tipo de Autobús", seguido de una cadena de caracteres que diga "Ruta", seguido de una cadena de caracteres que diga "Número de asiento". Una cadena de caracteres que indique "Reservación exitosa".
+
+4. Una cadena de caracteres que diga "Tipo de autobús inválido"
+
+5. Una cadena de caracteres que diga "Reservaciones guardadas exitosamente" o una cadena de caracteres que diga "Datos inválidos". 
+
+
+Restricciones:
+
+1. El programa debe aceptar un máximo de 100 usuarios
+num_usuarios =< 100
+
+2. Los autobuses tienen capacidad limitada:
+Autobús Turístico =< 60 asientos.
+Autobús de Carretera =< 40 asientos.
+Vagoneta =< 15 asientos.
+tipo_bus > 0 y tipo_bus =< 3
+
+3. Un máximo de 5 rutas por autobús.
+ruta =< 5
