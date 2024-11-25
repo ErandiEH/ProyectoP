@@ -128,4 +128,32 @@ void mostrar_asientos(int tipo_bus) {
     }
     printf("\n(O: Disponible, X: Ocupado)\n");
 }
+int seleccionar_asiento(int tipo_bus) {
+    int asiento;
+    do {
+        mostrar_asientos(tipo_bus);
+        printf("Seleccione número de asiento: ");
+        scanf("%d", &asiento);
+        
+        // Verificar rango y disponibilidad
+        if(asiento < 1 || asiento > autobuses[tipo_bus].capacidad_maxima) {
+            printf("Número de asiento inválido. Por favor, seleccione un asiento entre 1 y %d.\n", 
+                   autobuses[tipo_bus].capacidad_maxima);
+            continue;
+        }
+        
+        if(autobuses[tipo_bus].asientos[asiento-1].ocupado == 1) {
+            printf("Asiento ya ocupado. Por favor, elija otro.\n");
+            continue;
+        }
+        
+        // Marcar asiento como ocupado
+        autobuses[tipo_bus].asientos[asiento-1].ocupado = 1;
+        break;
+    } while(1);
+    
+    return asiento;
+}
 
+void realizar_reservacion() {
+    mostrar_tipos_autobus();
