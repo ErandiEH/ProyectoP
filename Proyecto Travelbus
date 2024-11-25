@@ -58,7 +58,6 @@ TipoAutobus autobuses[] = {
 Reservacion reservaciones[100];
 int num_reservaciones = 0;
 
-// Prototipos de funciones
 void registrar_usuario();
 void mostrar_tipos_autobus();
 void realizar_reservacion();
@@ -68,7 +67,6 @@ void guardar_reservaciones();
 void cargar_reservaciones();
 void imprimir_boleto(Reservacion reservacion);
 
-// Función para imprimir boleto
 void imprimir_boleto(Reservacion reservacion) {
     printf("\n--- BOLETO DE VIAJE ---\n");
     printf("Nombre: %s\n", reservacion.pasajero.nombre);
