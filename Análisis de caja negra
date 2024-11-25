@@ -11,9 +11,7 @@ Datos de entrada:
 
 Datos de salida:
 
-1. Una cadena de caracteres que diga "Seleccione una opción". Una cadena de caracteres que diga "Nombre completo". Una cadena de caracteres que diga "Correo electrónico ". Una cadena de caracteres que diga "Teléfono ". 
-Una cadena de caracteres que indique "Usuario registrado exitosamente". 
-Una cadena de caracteres que diga "Límite de usuarios alcanzados".
+1. Una cadena de caracteres que diga "Seleccione una opción". Una cadena de caracteres que diga "Nombre completo". Una cadena de caracteres que diga "Correo electrónico ". Una cadena de caracteres que diga "Teléfono ". Una cadena de caracteres que indique "Usuario registrado exitosamente". Una cadena de caracteres que diga "Límite de usuarios alcanzados".
 
 2. Una cadena de caracteres que diga "Seleccione tipo de autobús", seguido de una  cadena de caracteres que diga "Seleccione ruta". Una cadena de caracteres que muestre "Mapa de asientos - Autobús". Una representación visual del estado de los asientos con símbolos: '0': Asiento disponible, '1': Asiento ocupado. Una cadena de caracteres que diga "Seleccione número de asiento". Una cadena de caracteres que diga "Asiento ya ocupado, elija otro" o una cadena de de caracteres que diga "asiento inválido, elija un asiento del 1 a capacidad_maxima". 
 
