@@ -1,1 +1,149 @@
-
+Análisis de caja blanca
+1. Mostrar “Sistema de Reserva de Autobuses”
+2. Mostrar “1. Registrar usuario”
+ “2. Realizar reservación”
+ “3. Salir”
+3. Mostrar “seleccione una opción: “
+4. Dar y almacenar un número entero representado por opcion
+5. Si opcion == 1
+5.1 Mostrar “Nombre completo: “
+5.1.1Almacenar una cadena de caracteres representada por
+nombre
+5.2 Mostrar “Correo electrónico: “
+5.2.1 Almacenar una cadena de caracteres representada por
+correo
+5.3 Mostrar “Teléfono: “
+5.3.1 Almacenar una cadena numérica representada por 
+teléfono
+5.4 Mostrar “Usuario registrado exitosamente”
+5.5 Almacenar los usuarios registrados en num_usuarios
+5.6 Si num_ usuarios > 100
+5.6.1 Mostrar “Límite de usuarios alcanzado”
+6. Volver al Sistema de Reserva de Autobuses
+7. Si opcion == 2
+7.1 Mostrar:
+1. Autobús Turístico (Capacidad: 60)
+ - Circuito Histórico
+ - Tour Gastronómico
+ - Parque La Mexicana
+ - Universum
+2. Autobús de Carretera (Capacidad: 40)
+ - CDMX -> Puebla
+CDMX -> Querétaro
+ - CDMX -> Hidalgo
+3. Vagoneta (Capacidad: 15)
+ - CDMX -> Tepotzotlán
+ - CDMX -> Valle de Bravo
+7.2 Mostrar “Seleccione tipo de autobús: “
+7.2.1 Dar y almacenar un valor entero representado por 
+tipo_bus
+7.3 Si tipo_bus == 1
+7.3.1 Mostrar 
+ 1. Circuito Histórico
+ 2. Tour Gastronómico
+ 3. Parque La Mexicana
+ 4. Universum
+7.3.2 Mostrar “Seleccione ruta: “
+7.3.3 Dar y almacenar un valor entero representado por ruta
+7.3.4 Si ruta == 1 | ruta == 2 | ruta == 3 | ruta == 4
+7.3.4.1 Mostrar “Mapa de asientos - Autobús turístico”
+7.3.4.2 Mostrar “(0: Disponible, X: Ocupado)”
+7.3.4.3 Mostrar “Seleccione número de asiento: “
+7.3.4.4 Almacenar un valor entero representado por
+asiento
+7.3.4.5 Si asiento == ocupado
+7.3.4.5.1 Mostrar "Asiento ya ocupado, elija otro"
+7.3.4.5 Si asiento < 1 o asiento > capacidad_máxima 
+7.3.4.6.1 Mostrar "asiento inválido, elija un asiento del 1 a capacidad_máxima"
+7.3.4.7 Mostrar “Ingrese sus datos personales”
+7.3.4.8 Mostrar “Nombre: “
+7.3.4.9 Almacenar una cadena de caracteres 
+representada por nombre
+7.3.4.10 Mostrar “Correo: “
+7.3.4.11 Almacenar una cadena de caracteres 
+representada por correo
+7.3.4.12 Mostrar “BOLETO DE VIAJE”
+7.3.4.13 Mostrar “Nombre: “ seguido de una cadena de 
+caracteres representada por nombre
+7.3.4.14 Mostrar “Tipo de Autobús: “ seguido de una 
+cadena de caracteres representada por autobuses
+7.3.4.15 Mostrar “Ruta: “ seguido e una cadena de 
+caracteres representada por ruta
+7.3.4.16 Mostrar “Número de asiento: “ seguido de una 
+cadena de caracteres representada por asiento
+7.3.4.17 Mostrar “Reservación exitosa”
+7.4 Si tipo_bus == 2
+7.4.1 Mostrar
+ 1. CDMX -> Puebla
+ 2. CDMX -> Querétaro
+ 3. CDMX -> Hidalgo
+7.4.2 Mostrar “Seleccione ruta: “
+7.4.3 Dar y almacenar un valor entero representado por ruta
+7.4.4 Si ruta == 1 | ruta == 2 | ruta == 3
+7.4.4.1 Mostrar “Mapa de asientos – Autobús de 
+carretera”
+7.4.4.2 Mostrar “(0: Disponible, X: Ocupado)”
+7.4.4.3 Mostrar “Seleccione número de asiento: “
+7.4.4.4 Almacenar un valor entero representado por 
+asiento
+7.4.4.5 si asiento == ocupado
+7.4.4.5.1 Mostrar "asiento ocupado, por favor, elija otro"
+7.4.4.6 si asiento < 1 o asiento > capacidad_maxima
+7.4.4.6.1 Mostrar "asiento inválido, elija un asiento del 1 al capacidad_maxima
+7.4.4.7 Mostrar “Ingrese sus datos personales”
+7.4.4.8 Mostrar “Nombre: “
+7.4.4.9 Almacenar una cadena de caracteres 
+representada por nombre
+7.4.4.10 Mostrar “Correo: “
+7.4.4.11 Almacenar una cadena de caracteres 
+representada por correo
+7.4.4.12 Mostrar “BOLETO DE VIAJE”
+7.4.4.13 Mostrar “Nombre: “ seguido de una cadena de 
+caracteres representada por nombre
+7.4.4.14 Mostrar “Tipo de Autobús: “ seguido de una 
+cadena de caracteres representada por autobuses
+7.4.4.15 Mostrar “Ruta: “ seguido e una cadena de 
+caracteres representada por ruta
+7.4.4.16 Mostrar “Número de asiento: “ seguido de una 
+cadena de caracteres representada por asiento
+7.4.4.17 Mostrar “Reservación exitosa”
+7.5 Si tipo_bus == 3
+7.5.1 Mostrar 
+ 1. CDMX -> Tepotzotlán
+ 2. CDMX -> Valle de Bravo
+7.5.2 Mostrar “Seleccione ruta: “
+7.5.3 Dar y almacenar un valor entero representado por ruta
+7.5.4 Si ruta == 1 | ruta == 2
+7.5.4.1 Mostrar “Mapa de asientos - Vagoneta”
+7.5.4.2 Mostrar “(0: Disponible, X: Ocupado)”
+7.5.4.3 Mostrar “Seleccione número de asiento: “
+7.5.4.4 Almacenar un valor entero representado por 
+asiento
+7.5.4.5 Si asiento == ocupado
+7.5.4.5.1 Mostrar "asiento ya ocupado, por favor, elija otro"
+7.5.4.6 si asiento < 1 o asiento > capacidad_maxima 
+7.5.4.6.1 Mostrar "asiento inválido, elija un asiento del 1 a capacidad_maxima
+7.5.4.7 Mostrar “Ingrese sus datos personales“
+7.5.4.8 Mostrar “Nombre: “
+7.5.4.9 Almacenar una cadena de caracteres
+representada por nombre
+7.5.4.10 Mostrar “Correo: “
+7.5.4.11 Almacenar una cadena de caracteres
+representada por correo
+7.5.4.12 Mostrar “BOLETO DE VIAJE”
+7.5.4.13 Mostrar “Nombre: “ seguido de una cadena de 
+caracteres representada por nombre
+7.5.4.14 Mostrar “Tipo de Autobús: “ seguido de una 
+cadena de caracteres representada por autobuses
+7.5.4.15 Mostrar “Ruta: “ seguido e una cadena de 
+caracteres representada por ruta
+7.5.4.16 Mostrar “Número de asiento: “ seguido de una 
+cadena de caracteres representada por asiento
+7.5.4.17 Mostrar “Reservación exitosa”
+7.6 Si tipo_bus < 0 o tipo_bus > 3
+7.6.1 Mostrar “Tipo de autobús inválido”
+8. Volver al Sistema de Reserva de Autobuses
+9. Si opcion == 3
+9.1 Mostrar “Reservaciones guardadas exitosamente”
+10. En caso contrario 
+10.1 Mostrar una cadena de caracteres que diga "Datos inválidos"
