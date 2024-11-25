@@ -1,1 +1,135 @@
+INICIO 
+CARACTER: nombre, correo, telefono
+ENTERO: opcion, num_usuarios, tipo_bus, ruta, asiento
+CONSTANTE MAX_USUARIOS <= 100
+
+MIENTRAS (opcion != 3) HACER
+ESCRIBIR “Sistema de Reserva de Autobuses”
+ESCRIBIR “1. Registrar usuario” 
+ESCRIBIR “2. Realizar reservación”
+ESCRIBIR “3. Salir”
+ESCRIBIR “seleccione una opción: “
+LEER opcion 
+
+SELECCIONAR opcion EN 
+CASO '1'
+	SI (num_usuarios < MAX_USUARIOS) ENTONCES
+			ESCRIBIR “Nombre completo:”
+			LEER nombre
+			ESCRIBIR “Correo electrónico: “
+			LEER correo
+	 		ESCRIBIR “Teléfono: “
+			LEER telefono 
+      num_usuarios <= num_usuarios + 1
+			ESCRIBIR “Usuario registrado exitosamente”
+		FIN SI 
+		EN CASO CONTARIO 
+			ESCRIBIR “Límite de usuarios alcanzado”
+ 		FIN EN CASO CONTRARIO 
+ 
+CASO '2'	
+	 	ESCRIBIR “Seleccione tipo de autobús:”
+		ESCRIBIR "1. Autobús Turístico (Capacidad: 60)" 
+    ESCRIBIR "2. Autobús de Carretera (Capacidad: 40)" 
+    ESCRIBIR "3. Vagoneta (Capacidad: 15)"
+    ESCRIBIR "Seleccione tipo de autobús: "	
+		LEER tipo_bus
+		SI (tipo_bus==1) ENTONCES 
+      ESCRIBIR “1. Circuito Histórico”
+      ESCIRBIR “2. Tour Gastronómico”
+      ESCRIBIR “3. Parque La Mexicana”
+      ESCRIBIR “4. Universum”
+			ESCRIBIR “Seleccione ruta: “
+			LEER ruta
+			SI (ruta==1 | ruta == 2 | ruta == 3 | ruta == 4) ENTONCES
+				ESCRIBIR “Mapa de asientos - Autobús turístico”
+				ESCRIBIR “(0: Disponible, X: Ocupado)”
+				ESCRIBIR “Seleccione número de asiento: “
+				LEER asiento 
+				SI (asiento<=60) ENTONCES 
+					ESCRIBIR “Ingrese sus datos personales”
+					ESCRIBIR “Nombre:
+					LEER nombre
+					ESCRIBIR “Correo: “
+					LEER correo 
+					ESCRIBIR “BOLETO DE VIAJE”
+					ESCRIBIR “Nombre: “, nombre 
+					ESCRIBIR “Tipo de Autobús: “, autobuses
+					ESCRIBIR “ruta:”, ruta 
+					ESCRIBIR “Número de asiento: “, asiento 
+					ESCRIBIR “Reservación exitosa”
+				FIN SI 
+				EN CASO CONTRARIO 
+					ESCRIBIR “numero de asiento invalido, Por favor seleccione un asiento entre 1 y 60”
+				FIN EN CASO CONTRARIO 
+			FIN SI 
+		FIN SI
+    SI (tipo_bus==2) ENTONCES 
+			ESCRIBIR “1. CDMX -> Puebla”
+      ESCRIBIR “2. CDMX -> Querétaro”
+      ESCRIBIR “3. CDMX -> Hidalgo”
+			ESCRIBIR “Seleccione ruta: “
+			LEER ruta
+			SI (ruta==1 | ruta == 2 | ruta == 3) ENTONCES
+				ESCRIBIR “Mapa de asientos - Autobús de carretera”
+				ESCRIBIR “(0: Disponible, X: Ocupado)”
+				ESCRIBIR “Seleccione número de asiento: “
+				LEER asiento 
+				SI (asiento<=40) ENTONCES
+					ESCRIBIR “Ingrese sus datos personales”
+					ESCRIBIR “Nombre:
+					LEER nombre
+					ESCRIBIR “Correo: “
+					LEER correo 
+					ESCRIBIR “BOLETO DE VIAJE”
+					ESCRIBIR “Nombre: “, nombre 
+					ESCRIBIR “Tipo de Autobús: “, autobuses
+					ESCRIBIR “ruta:”, ruta 
+					ESCRIBIR “Número de asiento: “, asiento 
+					ESCRIBIR “Reservación exitosa”
+				FIN SI 
+				EN CASO CONTRARIO 
+					ESCRIBIR “numero de asiento invalido, Por favor seleccione un asiento entre 1 y 40”
+				FIN EN CASO CONTRARIO
+			FIN SI 
+		FIN SI 
+    SI (tipo_bus==3) ENTONCES 
+      ESCRIBIR “1. CDMX -> Tepotzotlán”
+      ESCRIBIR “2. CDMX -> Valle de Bravo”
+			ESCRIBIR “Seleccione ruta: “
+			LEER ruta
+			SI (ruta==1 | ruta == 2) ENTONCES
+				ESCRIBIR “Mapa de asientos -Vagoneta”
+				ESCRIBIR “(0: Disponible, X: Ocupado)”
+				ESCRIBIR “Seleccione número de asiento: “
+				LEER asiento 
+				SI (asiento<=15) ENTONCES
+					ESCRIBIR “Ingrese sus datos personales”
+					ESCRIBIR “Nombre:
+					LEER nombre
+					ESCRIBIR “Correo: “
+					LEER correo 
+					ESCRIBIR “BOLETO DE VIAJE”
+					ESCRIBIR “Nombre: “, nombre 
+					ESCRIBIR “Tipo de Autobús: “, autobuses
+					ESCRIBIR “ruta:”, ruta 
+					ESCRIBIR “Número de asiento: “, asiento 
+					ESCRIBIR “Reservación exitosa”
+				FIN SI 
+				EN CASO CONTRARIO
+					ESCRIBIR “numero de asiento invalido, Por favor seleccione un asiento entre 1 y 15”
+				FIN EN CASO CONTRARIO 
+			FIN SI 
+    FIN SI 
+		EN CASO CONTARIO 
+		ESCRIBIR “Tipo de autobús inválido. Por favor, seleccione un número entre 1 y 3."
+		FIN EN CASO CONTRARIO 
+CASO '3'
+		ESCRIBIR “Reservaciones guardadas exitosamente”
+	EN CASO CONTRARIO 
+		ESCRIBIR “opción invalida. Por favor, seleccione una opción válida”
+	FIN EN CASO CONTRARIO 
+FIN SELECCIONAR 
+FIN MIENTRAS
+FIN
 
