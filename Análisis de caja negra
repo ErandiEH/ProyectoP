@@ -1,6 +1,7 @@
 Datos de entrada:
 
-1. Una cadena de caracteres que muestre "Sistema de Reserva de Autobuses". Una cadena de caracteres representado por "Registrar usuario". Una cadena de caracteres representando por "Realizar reservación". Una cadena de caracteres representado por "Salir". Un número de tipo entero representado por "opción". Una cadena de caracteres representada por "nombre ". Una cadena de caracteres representada por "correo". Una cadena de tipo numérica representada por "teléfono". Una cadena de caracteres representado por "num_usuarios".
+1. Una cadena de caracteres que muestre "Sistema de Reserva de Autobuses". Una cadena de caracteres representado por "Registrar usuario". Una cadena de caracteres representando por "Realizar reservación". Una cadena de caracteres representado por "Salir". 
+Un número de tipo entero representado por "opción". Una cadena de caracteres representada por "nombre ". Una cadena de caracteres representada por "correo". Una cadena de tipo numérica representada por "teléfono". Una cadena de caracteres representado por "num_usuarios".
 
 2. Un valor de tipo entero representado por "tipo_bus". 
 
