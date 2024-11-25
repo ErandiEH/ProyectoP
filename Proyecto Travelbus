@@ -11,7 +11,7 @@ typedef struct {
   int ocupado;
 } Asiento;
 typedef struct {
-  char nombre [MAX NOMBRE];
+  char nombre [MAX_NOMBRE];
   char correo [MAX_CORREO];
   char telefono[15];
 } Usuario;
