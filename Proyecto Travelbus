@@ -210,3 +210,48 @@ void guardar_reservaciones() {
         printf("Error al guardar las reservaciones.\n");
         return;
     }
+fwrite(&num_reservaciones, sizeof(int), 1, archivo);
+    fwrite(reservaciones, sizeof(Reservacion), num_reservaciones, archivo);
+    fclose(archivo);
+    printf("Reservaciones guardadas exitosamente.\n");
+}
+
+void cargar_reservaciones() {
+    FILE *archivo = fopen("reservaciones.dat", "rb");
+    if(archivo == NULL) return;
+
+    fread(&num_reservaciones, sizeof(int), 1, archivo);
+    fread(reservaciones, sizeof(Reservacion), num_reservaciones, archivo);
+    fclose(archivo);
+}
+
+int main() {
+    int opcion;
+    cargar_reservaciones();
+
+    do {
+        printf("\n--- Sistema de Reservaciones de Autobuses ---\n");
+        printf("1. Registrar Usuario\n");
+        printf("2. Realizar Reservación\n");
+        printf("3. Salir\n");
+        printf("Seleccione una opción: ");
+        scanf("%d", &opcion);
+
+        switch(opcion) {
+            case 1: 
+                registrar_usuario(); 
+                break;
+            case 2: 
+                realizar_reservacion(); 
+                break;
+            case 3: 
+                guardar_reservaciones(); 
+                printf("Gracias por usar nuestro sistema.\n");
+                break;
+            default:
+                printf("Opción inválida. Por favor, seleccione una opción válida.\n");
+        }
+    } while(opcion != 3);
+
+    return 0;
+}
