@@ -15,7 +15,7 @@ typedef struct {
   char correo [MAX_CORREO];
   char telefono[15];
 } Usuario;
-typdef struct {
+typedef struct {
   char nombre[50];
   int capacidad_maxima;
   Asiento asientos[60];
@@ -36,7 +36,7 @@ TipoAutobus autobuses[] = {
   {  
       "Autobús Turístico",
       60, 
-      {{1,0}, {2,0}, {3,0}, {4,0}, {5,0}},
+      {{1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}},
       {"Circuito Histórico", "Tour Gatronómico","Parque La Mexicana", "Universum", ""},
       4
   },
