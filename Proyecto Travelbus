@@ -118,12 +118,9 @@ void mostrar_asientos(int tipo_bus) {
                    (autobuses[tipo_bus].capacidad_maxima <= 40) ? 6 : 10;
     
     for(int i = 0; i < autobuses[tipo_bus].capacidad_maxima; i++) {
-        // Símbolos para asientos
         char simbolo = autobuses[tipo_bus].asientos[i].ocupado ? 'X' : 'O';
-        
         printf("%3d:%c ", i+1, simbolo);
         
-        // Salto de línea cada cierto número de columnas
         if((i+1) % columnas == 0) printf("\n");
     }
     printf("\n(O: Disponible, X: Ocupado)\n");
@@ -134,8 +131,7 @@ int seleccionar_asiento(int tipo_bus) {
         mostrar_asientos(tipo_bus);
         printf("Seleccione número de asiento: ");
         scanf("%d", &asiento);
-        
-        // Verificar rango y disponibilidad
+      
         if(asiento < 1 || asiento > autobuses[tipo_bus].capacidad_maxima) {
             printf("Número de asiento inválido. Por favor, seleccione un asiento entre 1 y %d.\n", 
                    autobuses[tipo_bus].capacidad_maxima);
@@ -147,7 +143,6 @@ int seleccionar_asiento(int tipo_bus) {
             continue;
         }
         
-        // Marcar asiento como ocupado
         autobuses[tipo_bus].asientos[asiento-1].ocupado = 1;
         break;
     } while(1);
@@ -157,3 +152,34 @@ int seleccionar_asiento(int tipo_bus) {
 
 void realizar_reservacion() {
     mostrar_tipos_autobus();
+    
+    int tipo_bus;
+    do {
+        printf("Seleccione tipo de autobús (1-3): ");
+        scanf("%d", &tipo_bus);
+        tipo_bus--;
+
+        if(tipo_bus < 0 || tipo_bus >= 3) {
+            printf("Tipo de autobús inválido. Por favor, seleccione un número entre 1 y 3.\n");
+        }
+    } while(tipo_bus < 0 || tipo_bus >= 3);
+
+    int ruta_index;
+    do {
+        printf("\nRutas disponibles para %s:\n", autobuses[tipo_bus].nombre);
+        for(int i = 0; i < autobuses[tipo_bus].num_rutas; i++) {
+            if(strlen(autobuses[tipo_bus].rutas[i]) > 0) {
+                printf("%d. %s\n", i+1, autobuses[tipo_bus].rutas[i]);
+            }
+        }
+        printf("\nSeleccione ruta: ");
+        scanf("%d", &ruta_index);
+        ruta_index--;
+
+        if(ruta_index < 0 || ruta_index >= autobuses[tipo_bus].num_rutas || 
+           strlen(autobuses[tipo_bus].rutas[ruta_index]) == 0) {
+            printf("Ruta inválida. Por favor, seleccione una opción válida.\n");
+            continue;
+        }
+        break;
+    } while(1);
