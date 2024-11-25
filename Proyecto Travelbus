@@ -183,3 +183,30 @@ void realizar_reservacion() {
         }
         break;
     } while(1);
+
+
+    Reservacion nueva_reservacion;
+    nueva_reservacion.autobus = autobuses[tipo_bus];
+    strcpy(nueva_reservacion.destino, autobuses[tipo_bus].rutas[ruta_index]);
+    
+    nueva_reservacion.num_asiento = seleccionar_asiento(tipo_bus);
+
+    printf("\nIngrese sus datos personales:\n");
+    printf("Nombre: ");
+    scanf(" %[^\n]", nueva_reservacion.pasajero.nombre);
+    printf("Correo: ");
+    scanf(" %[^\n]", nueva_reservacion.pasajero.correo);
+
+    reservaciones[num_reservaciones++] = nueva_reservacion;
+
+    imprimir_boleto(nueva_reservacion);
+
+    printf("\nReservación realizada exitosamente.\n");
+}
+
+void guardar_reservaciones() {
+    FILE *archivo = fopen("reservaciones.dat", "wb");
+    if(archivo == NULL) {
+        printf("Error al guardar las reservaciones.\n");
+        return;
+    }
